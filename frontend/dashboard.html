@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard | Mini CRM</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div class="dashboard-container">
+<aside class="sidebar"><div class="brand"><div class="brand-mark">M</div><div><h2>Mini CRM</h2><small>Client management</small></div></div>
+<nav class="menu">
+<a data-page="dashboard.html" href="dashboard.html"><span class="menu-icon">⌂</span>Dashboard</a>
+<a data-page="leads.html" href="leads.html"><span class="menu-icon">◈</span>Leads</a>
+<a data-page="customers.html" href="customers.html"><span class="menu-icon">◉</span>Customers</a>
+<a data-page="followups.html" href="followups.html"><span class="menu-icon">◷</span>Follow-ups</a>
+<a data-page="reports.html" data-admin-only href="reports.html"><span class="menu-icon">▦</span>Reports</a>
+</nav><div class="sidebar-bottom"><div class="user-mini"><div class="avatar" id="sidebarAvatar">U</div><div><strong id="sidebarUserName">User</strong><span id="sidebarUserRole">ROLE</span></div></div>
+<a href="#" class="menu" onclick="logout();return false;"><span style="display:block;padding:10px 12px;color:#aeb6c4">↪ Logout</span></a></div></aside>
+<main class="main-content"><header class="topbar"><div><h1>Dashboard</h1><p class="subtitle">A clear view of your sales pipeline and customer activity.</p></div><div class="top-actions"><span class="page-user" id="pageUser"></span></div></header>
+<section class="cards">
+<div class="card"><div class="stat-head">Total Leads <span class="stat-icon">L</span></div><p id="totalLeads">0</p><div class="hint">All active lead records</div></div>
+<div class="card"><div class="stat-head">New Leads <span class="stat-icon">N</span></div><p id="newLeads">0</p><div class="hint">Recently captured</div></div>
+<div class="card"><div class="stat-head">Converted <span class="stat-icon">✓</span></div><p id="convertedLeads">0</p><div class="hint">Successful conversions</div></div>
+<div class="card"><div class="stat-head">Customers <span class="stat-icon">C</span></div><p id="totalCustomers">0</p><div class="hint">Customer records</div></div>
+</section>
+<div class="grid-2">
+<section class="panel"><div class="panel-head"><h2>Lead pipeline</h2><span class="muted">Live from database</span></div>
+<div class="progress-row"><div class="progress-label"><span>New</span><strong id="newPct">0</strong></div><div class="progress"><span id="newBar" style="width:0%"></span></div></div>
+<div class="progress-row"><div class="progress-label"><span>Contacted</span><strong id="contactedPct">0</strong></div><div class="progress"><span id="contactedBar" style="width:0%"></span></div></div>
+<div class="progress-row"><div class="progress-label"><span>Follow-up</span><strong id="followupPct">0</strong></div><div class="progress"><span id="followupBar" style="width:0%"></span></div></div>
+<div class="progress-row"><div class="progress-label"><span>Converted</span><strong id="convertedPct">0</strong></div><div class="progress"><span id="convertedBar" style="width:0%"></span></div></div></section>
+<section class="panel"><div class="panel-head"><h2>Quick actions</h2><span class="muted">Common tasks</span></div>
+<div style="display:grid;gap:10px;margin-top:16px"><a class="btn btn-primary" href="leads.html">＋ Add a new lead</a><a class="btn btn-secondary" href="customers.html">＋ Add customer</a><a class="btn btn-secondary" href="followups.html">◷ Schedule follow-up</a></div></section></div>
+<section class="table-section" style="margin-top:18px"><div class="section-head"><h2>Recent leads</h2><a class="btn btn-secondary btn-sm" href="leads.html">View all</a></div><div class="table-wrap" style="margin-top:16px"><table><thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Source</th><th>Status</th></tr></thead><tbody id="leadTableBody"></tbody></table></div></section></main></div><div id="toast" class="toast"></div><script src="js/app.js"></script><script src="js/dashboard.js"></script></body></html>

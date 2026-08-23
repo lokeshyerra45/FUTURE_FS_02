@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Leads | Mini CRM</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div class="dashboard-container">
+<aside class="sidebar"><div class="brand"><div class="brand-mark">M</div><div><h2>Mini CRM</h2><small>Client management</small></div></div>
+<nav class="menu">
+<a data-page="dashboard.html" href="dashboard.html"><span class="menu-icon">⌂</span>Dashboard</a>
+<a data-page="leads.html" href="leads.html"><span class="menu-icon">◈</span>Leads</a>
+<a data-page="customers.html" href="customers.html"><span class="menu-icon">◉</span>Customers</a>
+<a data-page="followups.html" href="followups.html"><span class="menu-icon">◷</span>Follow-ups</a>
+<a data-page="reports.html" data-admin-only href="reports.html"><span class="menu-icon">▦</span>Reports</a>
+</nav><div class="sidebar-bottom"><div class="user-mini"><div class="avatar" id="sidebarAvatar">U</div><div><strong id="sidebarUserName">User</strong><span id="sidebarUserRole">ROLE</span></div></div>
+<a href="#" class="menu" onclick="logout();return false;"><span style="display:block;padding:10px 12px;color:#aeb6c4">↪ Logout</span></a></div></aside>
+<main class="main-content"><header class="topbar"><div><h1>Leads</h1><p class="subtitle">Manage prospects from capture to conversion.</p></div><div class="top-actions"><span class="page-user" id="pageUser"></span></div></header>
+<section class="form-card"><div class="section-head"><div><h2>Add new lead</h2><span class="muted">Capture and assign a prospect.</span></div></div>
+<form id="leadForm"><div class="form-grid">
+<div class="field"><label>Lead ID (optional)</label><input type="number" id="customerId" placeholder="Leave blank for auto ID"></div>
+<div class="field"><label>Customer name *</label><input id="customerName" required placeholder="e.g. Rahul Sharma"></div>
+<div class="field"><label>Email *</label><input type="email" id="email" required placeholder="name@example.com"></div>
+<div class="field"><label>Phone *</label><input id="phone" required placeholder="+91 98765 43210"></div>
+<div class="field"><label>Source</label><input id="source" placeholder="Website, referral, campaign..."></div>
+<div class="field"><label>Assigned to</label><input id="assignedTo" placeholder="Employee name"></div>
+<div class="field"><label>Status</label><select id="status"><option>NEW</option><option>CONTACTED</option><option>FOLLOWUP</option><option>CONVERTED</option><option>REJECTED</option></select></div>
+</div><div class="actions"><button type="reset" class="btn btn-secondary">Clear</button><button class="btn btn-primary" id="saveLead">Add lead</button></div></form></section>
+<section class="table-section"><div class="section-head"><div><h2>Lead list</h2><span class="muted" id="leadCount">0 leads</span></div><button class="btn btn-secondary btn-sm" id="refreshLeads">↻ Refresh</button></div>
+<div class="toolbar"><div class="search"><input id="search" placeholder="Search name, email, phone..."></div><div class="filters"><select id="statusFilter"><option value="">All statuses</option><option>NEW</option><option>CONTACTED</option><option>FOLLOWUP</option><option>CONVERTED</option><option>REJECTED</option></select></div></div>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Name</th><th>Phone</th><th>Email</th><th>Source</th><th>Status</th><th>Assigned</th><th>Action</th></tr></thead><tbody id="leadTableBody"></tbody></table></div></section></main></div><div id="toast" class="toast"></div><script src="js/app.js"></script><script src="js/leads.js"></script></body></html>

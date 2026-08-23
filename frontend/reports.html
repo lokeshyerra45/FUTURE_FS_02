@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reports | Mini CRM</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div class="dashboard-container">
+<aside class="sidebar"><div class="brand"><div class="brand-mark">M</div><div><h2>Mini CRM</h2><small>Client management</small></div></div>
+<nav class="menu">
+<a data-page="dashboard.html" href="dashboard.html"><span class="menu-icon">⌂</span>Dashboard</a>
+<a data-page="leads.html" href="leads.html"><span class="menu-icon">◈</span>Leads</a>
+<a data-page="customers.html" href="customers.html"><span class="menu-icon">◉</span>Customers</a>
+<a data-page="followups.html" href="followups.html"><span class="menu-icon">◷</span>Follow-ups</a>
+<a data-page="reports.html" data-admin-only href="reports.html"><span class="menu-icon">▦</span>Reports</a>
+</nav><div class="sidebar-bottom"><div class="user-mini"><div class="avatar" id="sidebarAvatar">U</div><div><strong id="sidebarUserName">User</strong><span id="sidebarUserRole">ROLE</span></div></div>
+<a href="#" class="menu" onclick="logout();return false;"><span style="display:block;padding:10px 12px;color:#aeb6c4">↪ Logout</span></a></div></aside>
+<main class="main-content"><header class="topbar"><div><h1>Reports</h1><p class="subtitle">Understand pipeline performance at a glance.</p></div><div class="top-actions"><span class="page-user" id="pageUser"></span></div></header>
+<section class="cards">
+<div class="card"><div class="stat-head">Total Leads</div><p id="totalLeads">0</p></div><div class="card"><div class="stat-head">Converted</div><p id="convertedLeads">0</p></div><div class="card"><div class="stat-head">New</div><p id="newLeads">0</p></div><div class="card"><div class="stat-head">Contacted</div><p id="contactedLeads">0</p></div>
+<div class="card"><div class="stat-head">Follow-up</div><p id="followupLeads">0</p></div><div class="card"><div class="stat-head">Rejected</div><p id="rejectedLeads">0</p></div><div class="card"><div class="stat-head">Customers</div><p id="totalCustomers">0</p></div><div class="card"><div class="stat-head">Employees</div><p id="totalEmployees">0</p></div>
+</section><section class="panel"><div class="panel-head"><h2>Operational summary</h2><span class="muted">Live API data</span></div><div class="progress-row"><div class="progress-label"><span>Conversion rate</span><strong id="conversionRate">0%</strong></div><div class="progress"><span id="conversionBar" style="width:0%"></span></div></div></section></main></div><div id="toast" class="toast"></div><script src="js/app.js"></script><script src="js/reports.js"></script></body></html>

@@ -7,10 +7,10 @@
    `./mvnw spring-boot:run` (Linux/macOS)
    `.\mvnw.cmd spring-boot:run` (Windows PowerShell)
 
-Backend: http://localhost:8080
+Backend: https://abundant-liberation-production-825e.up.railway.app
 
 ## Run frontend
-The frontend is static HTML/CSS/JS and calls the Spring Boot API at `http://localhost:8080/api`.
+The frontend is static HTML/CSS/JS and calls the Spring Boot API at `https://abundant-liberation-production-825e.up.railway.app/api`.
 You can open `frontend/login.html` directly or serve the `frontend` folder with a simple static server.
 
 ## Main APIs

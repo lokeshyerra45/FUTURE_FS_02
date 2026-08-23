@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:8080/api";
+const API_BASE = "https://abundant-liberation-production-825e.up.railway.app/api";
 
 function getCurrentUser() {
     try {

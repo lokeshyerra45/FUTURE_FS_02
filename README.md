@@ -315,7 +315,7 @@ Or:
 The backend runs on:
 
 ```text
-http://localhost:8080
+https://abundant-liberation-production-825e.up.railway.app
 ```
 
 ---
